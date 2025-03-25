@@ -66,6 +66,6 @@ The heart rate monitor project utilizing the HW827 sensor and Arduino microcontr
 It demonstrated the feasibility of measuring and displaying heart rate data in real-time. 
 With its low cost and versatility, this system has the potential to impact various domains, including healthcare, fitness, and wellness.
 This project lays the foundation for further development and integration into wearable health monitoring devices.
-Continued development and integration with emerging technologies will further enhance its capabilities and applications.
+Continued development and integration with emerging technologies will further enhance its capabilities and applications..
 
 
