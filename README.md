@@ -56,7 +56,8 @@ Implementation of wireless connectivity for remote monitoring.
 Integration with mobile apps for data visualization and analysis.
 Enhancing the user interface for improved usability and accessibility.
 
-
+SERIAL MONITOR OUTPUT:
+IMG_20250326_024942.jpg
 
 CONCLUSION:
 
