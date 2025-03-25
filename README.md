@@ -27,9 +27,7 @@ Adafruit_SSD1306 library
 Pulse Sensor Playground library
 
 CIRCUIT DIAGRAM:
-
-
-
+a3a8091b-4709-4cb9-a9a6-661a5333d6ea.png
 
 WORKING PRINCIPLE:
 
