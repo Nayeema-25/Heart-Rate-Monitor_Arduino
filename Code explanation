@@ -1,0 +1,96 @@
+Code Explanation: Heart Rate Sensor Using Arduino
+
+This Arduino program reads the pulse sensor data, processes it, and blinks the built-in LED when a heartbeat is detected. It also sends the sensor values to the Serial Plotter for visualization.
+
+
+
+
+° Code Breakdown
+
+1. Define Constants & Variables
+
+int const PULSE_SENSOR_PIN = 0;   // 'S' Signal pin connected to A0
+int Signal;                       // Stores ADC data (range: 0-1024)
+int Threshold = 550;               // Defines a beat detection threshold
+
+PULSE_SENSOR_PIN = 0 → The sensor is connected to Analog Pin A0.
+
+Signal stores the analog value read from the sensor.
+
+Threshold = 550 → A value above 550 is considered a heartbeat.
+
+
+
+
+
+2. Setup Function (Runs Once)
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);  // Built-in LED will blink with heartbeats
+    Serial.begin(9600);            // Start serial communication at 9600 baud rate
+}
+
+The built-in LED (on most Arduinos, it's on Pin 13) is set as an output.
+
+Serial.begin(9600); → Initializes communication with the Serial Monitor for debugging.
+
+
+
+
+
+3. Loop Function (Runs Continuously)
+
+void loop() {
+    Signal = analogRead(PULSE_SENSOR_PIN); // Read the sensor value
+    Serial.println(Signal);                // Send the signal value to Serial Plotter
+
+Reads the analog value from the pulse sensor.
+
+Prints the value to the Serial Plotter for visualization.
+
+
+
+
+
+4. Heartbeat Detection & LED Blinking
+
+if(Signal > Threshold){                // If the signal is above threshold, turn on the LED
+        digitalWrite(LED_BUILTIN, HIGH);
+    } else {
+        digitalWrite(LED_BUILTIN, LOW);     // Else turn off the LED
+    }
+
+If the sensor reading is above 550, it turns ON the LED.
+
+If the signal drops below 550, the LED is turned OFF.
+
+This simulates the heartbeat by blinking the LED.
+
+
+
+
+
+5. Small Delay for Stability
+
+delay(10);  // Short delay for stable readings
+}
+
+A 10ms delay ensures smooth data flow to the Serial Plotter.
+
+
+
+ How This Code Works in Real Life
+
+1. Connect the pulse sensor to A0.
+
+
+2. When you place your finger on the sensor, it detects the heartbeat.
+
+
+3. The LED blinks with each beat.
+
+
+4. You can see the heart rate waveform in the Serial Plotter.
+
+
+
